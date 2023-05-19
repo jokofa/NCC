@@ -11,7 +11,7 @@ The preprint version of our paper can be found [here](https://arxiv.org/abs/2302
 ---
 
 
-### setup
+### Setup
 
 install via conda:
 ````
@@ -20,10 +20,14 @@ conda env create -f requirements.yml
 the data.zip is stored via [Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage).
 You have to download and unpack it before you can use it.
 
+
+---
 ### Evaluation
 Simply run the corresponding notebooks to prepare the data and run the evaluation.
 
 
+
+---
 ### Training
 
 In order to create training data, first sample data via [ccp_create_data.ipynb](ccp_create_data.ipynb).
