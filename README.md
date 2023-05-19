@@ -26,7 +26,9 @@ Simply run the corresponding notebooks to prepare the data and run the evaluatio
 ### Training
 
 In order to create training data, first sample data via [ccp_create_data.ipynb](ccp_create_data.ipynb).
-Then run the training task runner via [run.py](run.py). The model is configured via hydra. 
+Then create labels via a method of choice using 
+[ccp_create_labels.py](ccp_create_labels.py) or [vrp_create_labels.py](vrp_create_labels.py).
+Finally run the training task runner via [run.py](run.py). The model is configured via hydra. 
 The configuration files can be found in the config directory. 
 The default config can also be shown via the -h flag
 ````
