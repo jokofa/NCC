@@ -1,0 +1,10 @@
+# @package _global_
+# problem args
+
+DSET: "shanghai_tel_"
+
+model_args:
+  problem: "ccp"
+  graph_size: 200
+  train_dataset: data/CCP/benchmark/shanghai_telecom/sub/train_s4961_n200_cap1_1_seed1234.npz
+  val_dataset: data/CCP/benchmark/shanghai_telecom/sub/val_s4961_n200_cap1_1_seed1234.npz

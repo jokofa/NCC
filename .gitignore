@@ -1,0 +1,31 @@
+**.idea
+**__pycache__
+
+# latex stuff
+**.fdb_latexmk
+**.xml
+**.toc
+**.aux
+**.nav
+**.snm
+**.gz
+**.vrb
+**.out
+**.hid
+**.bcf
+**.bbl
+**.blg
+**.fls
+
+# image data
+**.html
+# log files
+**.log
+
+# directories
+results
+data
+run_log
+logs
+outputs_eval
+result

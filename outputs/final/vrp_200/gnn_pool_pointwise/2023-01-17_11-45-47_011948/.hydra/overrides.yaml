@@ -1,0 +1,2 @@
+- problem=vrp200
+- encoder=vrp_gnn_pool

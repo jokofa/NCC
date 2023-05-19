@@ -1,0 +1,10 @@
+# @package _global_
+# problem args
+
+DSET: ""
+
+model_args:
+  problem: "vrp"
+  graph_size: 200
+  train_dataset: data/VRP/VRP200/train_s5120_mixed_unf0.2_n200_kmax30_cap1_1_seed1234.npz
+  val_dataset: data/VRP/VRP200/val_s5120_mixed_unf0.2_n200_kmax30_cap1_1_seed1234.npz

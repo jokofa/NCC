@@ -1,0 +1,10 @@
+# @package _global_
+# problem args
+
+DSET: ""
+
+model_args:
+  problem: "ccp"
+  graph_size: 200
+  train_dataset: data/CCP/CCP200/train_gm_n200_k3-12_s4052_cap1_1_seed1234.npz
+  val_dataset: data/CCP/CCP200/val_gm_n200_k3-12_s4052_cap1_1_seed1234.npz

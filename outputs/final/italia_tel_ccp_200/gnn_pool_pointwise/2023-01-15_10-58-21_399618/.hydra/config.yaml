@@ -1,0 +1,87 @@
+DSET: italia_tel_
+model_args:
+  problem: ccp
+  graph_size: 200
+  train_dataset: data/CCP/benchmark/telecom_italia/sub/train_s4981_n200_cap1_1_seed1234.npz
+  val_dataset: data/CCP/benchmark/telecom_italia/sub/val_s4981_n200_cap1_1_seed1234.npz
+  input_dim: 3
+  embedding_dim: 256
+  knn: 25
+  node_encoder_args:
+    hidden_dim: 256
+    num_layers: 4
+    conv_type: GraphConv
+    activation: gelu
+    skip: true
+    norm_type: ln
+    add_linear: false
+  center_encoder_args:
+    hidden_dim: 256
+    num_layers: 2
+    pooling_type:
+    - mean
+    - max
+    pool_comb_mode: proj
+    meta_comb_mode: cat
+    pre_proj: true
+    post_proj: true
+    attn: true
+    num_heads: 4
+    activation: gelu
+    norm_type: ln
+  decoder_type: PointwiseDecoder
+  decoder_args:
+    hidden_dim: 256
+    comb_mode: cat
+    num_layers: 2
+    activation: gelu
+    norm_type: null
+  seed: $(global_seed)
+  num_workers: 4
+  pin_memory: true
+  train_dataset_size: null
+  train_batch_size: 128
+  val_dataset_size: null
+  val_batch_size: 64
+  optimizer: Adam
+  optimizer_cfg:
+    lr: 0.001
+    weight_decay: 0
+  scheduler_cfg:
+    schedule_type: step
+    decay: 0.55
+    decay_step: 40
+enc: gnn_pool
+dec: pointwise
+run_type: debug
+debug_lvl: 1
+global_seed: 1234
+log_lvl: INFO
+tb_log_path: logs/tb/
+val_log_path: logs/val/
+trainer_args:
+  resume_from_checkpoint: null
+  accelerator: gpu
+  devices: 1
+  max_epochs: 200
+  check_val_every_n_epoch: 1
+  precision: 32
+  gradient_clip_val: 0.5
+  gradient_clip_algorithm: norm
+  deterministic: false
+  benchmark: true
+  log_every_n_steps: 20
+  enable_progress_bar: true
+  fast_dev_run: false
+  device_stats: false
+  profiler: null
+  overfit_batches: 0.0
+  enable_model_summary: false
+  track_grad_norm: -1
+checkpoint_path: checkpoints/
+checkpoint_args:
+  save_last: true
+  save_top_k: 2
+  monitor: val_acc
+  mode: max
+  filename: '{epoch}_{val_acc:.4f}'
