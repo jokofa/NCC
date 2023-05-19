@@ -6,7 +6,7 @@ This is the repo accompanying our paper
 accepted at the 32nd International Joint Conference on Artificial Intelligence
 (IJCAI23).
 
-The preprint version of our paper can be found [here](https://arxiv.org/abs/2302.05134)
+The preprint version of our paper can be found [here](https://arxiv.org/abs/2302.05134).
 
 ---
 
@@ -36,3 +36,4 @@ The default config can also be shown via the -h flag
 python run.py -h
 ````
 additional arguments can simply be provided via the command line.
+
