@@ -17,7 +17,8 @@ install via conda:
 ````
 conda env create -f requirements.yml
 ````
-the data is stored via [Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage).
+the data.zip is stored via [Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage).
+You have to download and unpack it before you can use it.
 
 ### Evaluation
 Simply run the corresponding notebooks to prepare the data and run the evaluation.
